@@ -1,5 +1,3 @@
-// Alunos: Leonardo Ferreira da Cunha e Lucas de Jesus Santos Moura
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -521,11 +519,11 @@ int humano_x_maquina(){
                     m_nav5[i][1] = coluna - i;
                 }
 
-                // Caso o Navio se movimente para fora do tabuleiro, o laço é encerrado,as posicoes iniciais
+                // Caso o Navio se movimente para fora do tabuleiro, o laÃ§o Ã© encerrado,as posicoes iniciais
                 // do navio sera gerada novamente e a variavel PROBLEMA recebera o numero 1, indicando que
                 // houve um erro durante o posicionamento do navio
 
-                // (O Navio sai do tabuleiro quando a linha ou a coluna é igual ou maior que 10, ou menor que 0.)
+                // (O Navio sai do tabuleiro quando a linha ou a coluna Ã© igual ou maior que 10, ou menor que 0.)
                 for(i=0; i < 5; i++){
                     if(m_nav5[i][1] < 0){
                         problema = 1;
@@ -620,8 +618,8 @@ int humano_x_maquina(){
         // NAVIO DE 4 CELULAS DA MAQUINA
         do{
             problema = 0;
-            // O Bloco abaixo só tera algum tipo de impacto relevante no código caso haja algum problema na primeira
-            // iteração, será responsavel por apagar os 'Z'.
+            // O Bloco abaixo sÃ³ tera algum tipo de impacto relevante no cÃ³digo caso haja algum problema na primeira
+            // iteraÃ§Ã£o, serÃ¡ responsavel por apagar os 'Z'.
             for(i=0; i < TAM; i++){
                 for(j=0; j < TAM; j++){
                     if(mapa_maquina[i][j] == 'Z'){
@@ -736,7 +734,7 @@ int humano_x_maquina(){
 
             // Verificando se ha algum tipo de sobreposicao entre o navio de 4 celulas definido agora
             // E o navio de 5 celulas definido anteriormente, caso haja alguma sobreposicao, o navio
-            // de 4 celulas será apagado e gerado novamente até que nao haja qualquer tipo de sobreposicao com o N5
+            // de 4 celulas serÃ¡ apagado e gerado novamente atÃ© que nao haja qualquer tipo de sobreposicao com o N5
             for (i=0 ; i < 5; i++)
                 {
                     for (j=0 ; j < 4; j++)
@@ -746,7 +744,7 @@ int humano_x_maquina(){
                         if(m_nav5[i][0] == m_nav4[j][0] && m_nav5[i][1] == m_nav4[j][1]){
 
                             // Como houve sobreposicao, a letra 'Z' ( Que representa o N4 ) Ficou por cima do
-                            // 'K' definido anteriormente, o que está sendo feito abaixo é devolver o 'K'
+                            // 'K' definido anteriormente, o que estÃ¡ sendo feito abaixo Ã© devolver o 'K'
                             // A sua posicao original
 
                             l = m_nav5[i][0];
@@ -1461,7 +1459,7 @@ int verificar_sobreposicoes(int navio5[5][2], int navio4[4][2], int navio3_1[3][
         }
     }
 
-        // VERIFICANDO SE HÁ SOBREPOSICOES NO N4
+        // VERIFICANDO SE HÃ SOBREPOSICOES NO N4
     for (i=0 ; i < 4; i++) {
         for (j=0 ; j < 3; j++) {
 
@@ -1488,7 +1486,7 @@ int verificar_sobreposicoes(int navio5[5][2], int navio4[4][2], int navio3_1[3][
         }
     }
 
-    // VERIFICANDO SE HÁ SOBREPOSICOES NO N3
+    // VERIFICANDO SE HÃ SOBREPOSICOES NO N3
     for (i=0 ; i < 3; i++) {
         for (j=0 ; j < 2; j++) {
             // VERIFICANDO SE HA CONFLITO COM O N2
